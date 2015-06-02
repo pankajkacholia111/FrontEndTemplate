@@ -218,7 +218,18 @@ a#scrollUp i{
 	color:#fe980f;
 	background:#fff;
 }
-
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #FE980F;
+  outline: 0;
+  font-size: 15px;
+}
+.glyphicon {
+font-size: 10px;
+  -moz-osx-font-smoothing: grayscale;
+  padding-left: 8px;
+}
 
 .header-bottom {
     padding-bottom: 7px;
@@ -235,7 +246,7 @@ a#scrollUp i{
 }
 .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus {
   color: #fff;
-  background-color: red;
+  background-color: rgb(240, 131, 14);
 }
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
   color: #fff;
