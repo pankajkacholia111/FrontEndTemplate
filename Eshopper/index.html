@@ -25,44 +25,68 @@
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>
-$(document).ready(function(){
-    $("ul .list-group li").hover(function(){
-        
-		
-		
-    });
-	$('.select').hover(function (e) {
-	
-    e.preventDefault()
-  $(this).tab('show')
-})
+        $(document).ready(function () {
 
-	  $("#myBtn").click(function(){
-        $("#myModal").modal();
-    });
-	$("#signupBtn").click(function(){
-        $("#signup").modal();
-    });
-	$("#signinBtn").click(function(){
-        $("#myModal").modal();
-    });
-	$("#forgetpwd").click(function(){
-        $("#forgetpwdmodel").modal();
-    });
+            $('.select').hover(function (e) {
+
+                e.preventDefault()
+                $(this).tab('show')
+            })
+
+            $("div[role='tabpanel']").mouseleave(function () {
 
 
-});
+            $("li[role='presentation']").removeClass('active');
+            $(".tab-pane").removeClass('active');
+
+            })
+
+            $("#myBtn").click(function () {
+                $("#myModal").modal();
+            });
+            $("#signupBtn").click(function () {
+                $("#signup").modal();
+            });
+            $("#signinBtn").click(function () {
+                $("#myModal").modal();
+            });
+            $("#forgetpwd").click(function () {
+                $("#forgetpwdmodel").modal();
+            });
+
+
+        });
     </script>
     <style>
-	.col-md-3 .list-group  li:hover
-	{
-	   font-family: serif;
-       font-size: 18px;
-	}
-	.col-md-3 .list-group  li
-	{
-	font-size: 16px;
-	}
+        .col-md-3 .list-group li:hover {
+            font-family: serif;
+            font-size: 17px;
+			border:1px solid white;
+		display: block;
+  border-radius: 4px;
+	
+        }
+		a {
+  color: #020203;
+  }
+  .list-group li 
+  {
+    margin-bottom: 6px;
+  }
+  .submenutext
+  {
+  padding: 0.2em 2.6em .3em;
+     display: block; 
+	 line-height: 0.9;
+  }
+        .col-md-3 .list-group li {
+            font-family: serif;
+        }
+
+        .col-md-3 .list-group li {
+            font-size: 16px;
+        }
+
         .modal-header, h4, .close {
             background-color: #FE980F;
             color: white !important;
@@ -297,109 +321,123 @@ $(document).ready(function(){
 
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs" role="tablist" style="background-color:orange">
-                            <li role="presentation" class="active"><a href="#home" class="select" aria-controls="home" role="tab" data-toggle="tab">ELECTRONICS</a></li>
+                            <li role="presentation"><a href="#home" class="select" aria-controls="home" role="tab" data-toggle="tab">ELECTRONICS</a></li>
                             <li role="presentation"><a href="#profile" class="select" aria-controls="profile" role="tab" data-toggle="tab">MEN</a></li>
                             <li role="presentation"><a href="#messages" class="select" aria-controls="messages" role="tab" data-toggle="tab">WOMEN</a></li>
                             <li role="presentation"><a href="#settings" class="select" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
                         </ul>
 
                         <!-- Tab panes -->
-                        <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane active" id="home" style="border:0px solid;box-shadow: 5px 5px 3px #888888;border-left-color: orange;
-  border-left-width: 5px;">
+                        <div class="tab-content" style="position:absolute;  z-index: 18;">
+                            <div role="tabpanel" class="tab-pane" id="home" style="border:0px solid;box-shadow: 5px 5px 3px #888888;border-left-color: orange;
+                                 border-left-width:5px;  background-color: rgb(255, 198, 127);">
                                 <div class="container">
-								<div class="row">
-								<div class="col-sm-12" style="border:1px solid orange;  height: 37px; box-shadow: 2px 2px 2px #888888;">
-								
-								</div>
-								</div>
-								
-								<div class="row" style="margin-top:2px;  background-color: aliceblue;  padding-top: 17px;">
-									<div class="col-md-3">
-										<ul class="list-group" >
-											    <li><a href="#"><strong>Mobiles</strong></a><span class="glyphicon glyphicon-play"></span></li>
-												<li style="margin-left:5px;"><a href="#">First item</a></li>
-											    <li style="margin-left:5px;"><a href="#">First item</a></li>
-											    <li style="margin-left:5px;"><a href="#">First item</a></li>
-												<li style="margin-left:5px;"><a href="#">First item</a></li>
-												<li style="margin-left:5px;"><a href="#">First item</a></li>
-												<li style="margin-left:5px;"><a href="#">First item</a></li>
-										</ul>
-									</div>
-									<div class="col-md-3">
-										<ul class="list-group" >
-											    <li><a href="#"><strong>Tablets</strong></a><span class="glyphicon glyphicon-play"></span></li>
-												<li style="margin-left:5px;"><a href="#">First item</a></li>
-											    <li style="margin-left:5px;"><a href="#">First item</a></li>
-											    <li style="margin-left:5px;"><a href="#">First item</a></li>
-												<li style="margin-left:5px;"><a href="#">First item</a></li>
-												<li style="margin-left:5px;"><a href="#">First item</a></li>
-												<li style="margin-left:5px;"><a href="#">First item</a></li>
-										</ul>
-									</div>
-									<div class="col-md-3">
-										<ul class="list-group" >
-											    <li><a href="#"><strong>Trending</strong></a><span class="glyphicon glyphicon-play"></span></li>
-												<li style="margin-left:5px;"><a href="#">First item</a></li>
-											    <li style="margin-left:5px;"><a href="#">First item</a></li>
-											    <li style="margin-left:5px;"><a href="#">First item</a></li>
-												<li style="margin-left:5px;"><a href="#">First item</a></li>
-												<li style="margin-left:5px;"><a href="#">First item</a></li>
-												<li style="margin-left:5px;"><a href="#">First item</a></li>
-										</ul>
-									</div>
-			</div>
+                                    <div class="row">
+                                        <div class="col-sm-12" style="border:1px solid orange;  height: 37px; box-shadow: 2px 2px 2px #888888;background-color: white">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="row" style="margin-top:2px;padding-top: 17px;">
+                                        <div class="col-md-3" style="border-right:1px solid white">
+                                            <ul class="list-group">
+                                                <li><a href="#" class="label label-success"><strong>Mobiles</strong></a><span class="glyphicon glyphicon-play"></span></li>
+                                                <li style="margin-left:5px;"><a href="#">First item</a></li>
+                                                <li style="margin-left:5px;"><a href="#">First item</a></li>
+                                                <li style="margin-left:5px;"><a href="#">First item</a></li>
+                                                <li style="margin-left:5px;"><a href="#">First item</a></li>
+                                                <li style="margin-left:5px;"><a href="#">First item</a></li>
+                                                <li style="margin-left:5px;"><a href="#">First item</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3" style="border-right:1px solid white">
+                                            <ul class="list-group">
+                                                <li><a href="#" class="label label-success"><strong>Tablets</strong></a><span class="glyphicon glyphicon-play"></span></li>
+                                                <li style="margin-left:5px;"><a href="#">First item</a></li>
+                                                <li style="margin-left:5px;"><a href="#">First item</a></li>
+                                                <li style="margin-left:5px;"><a href="#">First item</a></li>
+                                                <li style="margin-left:5px;"><a href="#">First item</a></li>
+                                                <li style="margin-left:5px;"><a href="#">First item</a></li>
+                                                <li style="margin-left:5px;"><a href="#">First item</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <ul class="list-group">
+                                                <li><a href="#" class="label label-success"><strong>Trending</strong></a><span class="glyphicon glyphicon-play"></span></li>
+                                                <li style="margin-left:5px;"><a href="#">First item</a></li>
+                                                <li style="margin-left:5px;"><a href="#">First item</a></li>
+                                                <li style="margin-left:5px;"><a href="#">First item</a></li>
+                                                <li style="margin-left:5px;"><a href="#">First item</a></li>
+                                                <li style="margin-left:5px;"><a href="#">First item</a></li>
+                                                <li style="margin-left:5px;"><a href="#">First item</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="profile" style="border:0px solid;box-shadow: 5px 5px 3px #888888;border-left-color: orange;
-  border-left-width: 5px;">
-							
-						         <div class="container">
-								<div class="row">
-								<div class="col-sm-12" style="border:1px solid orange;  height: 37px; box-shadow: 2px 2px 2px #888888;">
-								
-								</div>
-								</div>
-								
-								<div class="row" style="margin-top:2px;  background-color: aliceblue;  padding-top: 17px;">
-									<div class="col-md-3">
-										<ul class="list-group" >
-											    <li><a href="#"><strong>All Footwear</strong></a><span class="glyphicon glyphicon-play"></span></li>
-												<li style="margin-left:5px;"><a href="#">First item</a></li>
-											    <li style="margin-left:5px;"><a href="#">First item</a></li>
-											    <li style="margin-left:5px;"><a href="#">First item</a></li>
-												<li style="margin-left:5px;"><a href="#">First item</a></li>
-												<li style="margin-left:5px;"><a href="#">First item</a></li>
-												<li style="margin-left:5px;"><a href="#">First item</a></li>
-										</ul>
-									</div>
-									<div class="col-md-3">
-										<ul class="list-group" >
-											    <li><a href="#"><strong>All Clothing</strong></a><span class="glyphicon glyphicon-play"></span></li>
-												<li style="margin-left:5px;"><a href="#">First item</a></li>
-											    <li style="margin-left:5px;"><a href="#">First item</a></li>
-											    <li style="margin-left:5px;"><a href="#">First item</a></li>
-												<li style="margin-left:5px;"><a href="#">First item</a></li>
-												<li style="margin-left:5px;"><a href="#">First item</a></li>
-												<li style="margin-left:5px;"><a href="#">First item</a></li>
-										</ul>
-									</div>
-									<div class="col-md-3">
-										<ul class="list-group" >
-											    <li><a href="#"><strong>All Men's Accessories</strong></a><span class="glyphicon glyphicon-play"></span></li>
-												<li style="margin-left:5px;"><a href="#">First item</a></li>
-											    <li style="margin-left:5px;"><a href="#">First item</a></li>
-											    <li style="margin-left:5px;"><a href="#">First item</a></li>
-												<li style="margin-left:5px;"><a href="#">First item</a></li>
-												<li style="margin-left:5px;"><a href="#">First item</a></li>
-												<li style="margin-left:5px;"><a href="#">First item</a></li>
-										</ul>
-									</div>
-			</div>
+  border-left-width: 5px;  background-color: rgb(255, 198, 127);">
+
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-12" style="border:1px solid orange;  height: 37px; box-shadow: 2px 2px 2px #888888;background-color: white">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="row" style="margin-top:2px;padding-top: 17px;">
+                                        <div class="col-md-3" style="border-right:1px solid white">
+                                            <ul class="list-group">
+                                                <li><a href="#" class="label label-success"><strong>All Footwear</strong></a><span class="glyphicon glyphicon-play"></span></li>
+                                                <li class="label label-danger submenutext"><a href="#">First item</a></li>
+                                                <li class="label label-danger submenutext"><a href="#">First item</a></li>
+                                                <li class="label label-danger submenutext"><a href="#">First item</a></li>
+                                                <li class="label label-danger submenutext"><a href="#">First item</a></li>
+                                                <li class="label label-danger submenutext"><a href="#">First item</a></li>
+                                                <li class="label label-danger submenutext"><a href="#">First item</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3" style="border-right:1px solid white">
+                                            <ul class="list-group">
+                                                <li><a href="#" class="label label-success"><strong>All Clothing</strong></a><span class="glyphicon glyphicon-play"></span></li>
+                                                <li  class="label label-danger submenutext"><a href="#">First item</a></li>
+                                                <li class="label label-danger submenutext"><a href="#">First item</a></li>
+                                                <li class="label label-danger submenutext"><a href="#">First item</a></li>
+                                                <li class="label label-danger submenutext"><a href="#">First item</a></li>
+                                                <li class="label label-danger submenutext"><a href="#">First item</a></li>
+                                                <li class="label label-danger submenutext" ><a href="#">First item</a></li>
+                                                <li class="label label-danger submenutext"><a href="#">First item</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3" style="border-right:1px solid white">
+                                            <ul class="list-group">
+                                                <li><a href="#" class="label label-success"><strong>All Men's Accessories</strong></a><span class="glyphicon glyphicon-play"></span></li>
+                                                <li class="label label-danger submenutext"><a href="#">First item</a></li>
+                                                <li class="label label-danger submenutext"><a href="#">First item</a></li>
+                                                <li class="label label-danger submenutext"><a href="#">First item</a></li>
+                                                <li class="label label-danger submenutext"><a href="#">First item</a></li>
+                                                <li class="label label-danger submenutext"><a href="#">First item</a></li>
+                                                <li class="label label-danger submenutext"><a href="#">First item</a></li>
+                                                <li class="label label-danger submenutext"><a href="#">First item</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <ul class="list-group">
+                                                <li><a href="#" class="label label-success"><strong>All Men's Accessories</strong></a><span class="glyphicon glyphicon-play"></span></li>
+                                                <li class="label label-danger submenutext"><a href="#">First item</a></li>
+                                                <li class="label label-danger submenutext"><a href="#">First item</a></li>
+                                                <li class="label label-danger submenutext"><a href="#">First item</a></li>
+                                                <li class="label label-danger submenutext"><a href="#">First item</a></li>
+                                                <li class="label label-danger submenutext"><a href="#">First item</a></li>
+                                                <li class="label label-danger submenutext"><a href="#">First item</a></li>
+                                                <li class="label label-danger submenutext"><a href="#">First item</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
-                         	  
-							
-							</div>
+
+
+                            </div>
                             <div role="tabpanel" class="tab-pane" id="messages">..kacholia.</div>
                             <div role="tabpanel" class="tab-pane" id="settings">...</div>
                         </div>
